@@ -1,227 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Scam Detector</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <title>Privacy Policy - DSWD ICT Messenger Bot</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-      background-color: #f9f9fb;
-      color: #333;
-    }
-
     body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 480px;
-      padding: 1rem;
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .header h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #2c3e50;
-    }
-
-    .description {
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      color: #555;
-    }
-
-    label {
-      font-weight: 600;
-      margin: 1rem 0 0.5rem;
-      color: #2c3e50;
-      font-size: 0.9rem;
-    }
-
-    textarea {
-      width: 100%;
-      height: 130px;
-      padding: 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      margin-bottom: 1rem;
-      resize: vertical;
-      font-size: 0.9rem;
-    }
-
-    .analyze-btn,
-    .clear-btn {
-      width: 100%;
-      background-color: #2d89ef;
-      color: white;
-      padding: 0.9rem;
-      border: none;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 0.75rem;
-      transition: background-color 0.2s ease-in-out;
-    }
-
-    .analyze-btn:hover,
-    .clear-btn:hover {
-      background-color: #1a6fd1;
-    }
-
-    .result {
-      margin-top: 1.5rem;
-      background-color: #f1f8ff;
-      border-left: 4px solid #2d89ef;
-      padding: 1rem;
-      border-radius: 8px;
-      display: none;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f9f9f9;
       color: #333;
-      line-height: 1.5;
-      font-size: 0.9rem;
     }
-
-    .footer {
-      text-align: center;
-      margin-top: 2rem;
-      font-size: 0.8rem;
-      color: #999;
+    h1, h2 {
+      color: #0056b3;
     }
-
-    @media (max-height: 600px) {
-      body {
-        align-items: flex-start;
-      }
-      .container {
-        margin-top: 1rem;
-        height: auto;
-      }
+    .section {
+      margin-bottom: 30px;
     }
-
-    @media (max-width: 480px) {
-      body {
-        padding: 0.5rem;
-      }
-      .container {
-        padding: 0.75rem;
-        border-radius: 8px;
-      }
-      .header {
-        margin-bottom: 1rem;
-      }
-      label {
-        margin-top: 0.75rem;
-        margin-bottom: 0.25rem;
-      }
-      textarea {
-        margin-bottom: 0.75rem;
-      }
-      .analyze-btn,
-      .clear-btn {
-        padding: 0.8rem;
-        font-size: 0.85rem;
-        margin-top: 0.5rem;
-      }
-      .result {
-        margin-top: 1rem;
-        padding: 0.75rem;
-        font-size: 0.85rem;
-      }
-      .footer {
-        margin-top: 1.5rem;
-        font-size: 0.75rem;
-      }
-    }
-
-    @media (max-width: 320px) {
-      textarea {
-        height: 100px;
-      }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #666;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>AI Scam Detector</h1>
-      <p class="description">Paste a message and let our AI help you check if it's a scam.</p>
-    </div>
 
-    <label for="message">Paste the suspicious message here:</label>
-    <textarea id="message" placeholder="Example: 'You won a prize! Click this link to claim...'"></textarea>
+  <h1>Privacy Policy</h1>
+  <p><strong>Effective Date:</strong> [Insert Date]</p>
 
-    <button class="analyze-btn" onclick="analyzeScam()">🔍 Analyze Message</button>
-    <button class="clear-btn" onclick="clearInput()">🧹 Clear Input</button>
-
-    <div class="result" id="result"></div>
-
-    <div class="footer">
-      © 2025 DSWD CyberSafe Team
-    </div>
+  <div class="section">
+    <h2>1. Introduction</h2>
+    <p>This Privacy Policy explains how we collect, use, and protect your information when you interact with the <strong>DSWD ICT Messenger Bot</strong> via Facebook Messenger. This bot is developed to assist users by providing step-by-step ICT-related support and guidance using AI.</p>
   </div>
 
-  <script>
-  function analyzeScam() {
-    const input = document.getElementById("message").value.trim();
-    const resultBox = document.getElementById("result");
-    resultBox.style.display = 'block';
-    resultBox.textContent = "Analyzing...";
+  <div class="section">
+    <h2>2. Information We Collect</h2>
+    <p>We may collect the following information:</p>
+    <ul>
+      <li>Messages you send to the bot (e.g., questions or concerns)</li>
+      <li>Your Facebook Messenger ID (used only to respond to your messages)</li>
+    </ul>
+    <p>We <strong>do not</strong> collect sensitive personal data (e.g., passwords, government IDs, or financial information).</p>
+  </div>
 
-    fetch("https://script.google.com/a/macros/dswd.gov.ph/s/AKfycbz5l534Gl8P49sz8KHrX1ToCEubkHGogpdG-ITVuUf6xlMuGugROC71d3L1K2JryUIy/exec", {
-      method: "POST",
-      headers: {
-       "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ message: input }),
-    })
-    .then(response => response.json())
-    .then(data => {
-      const rawAnalysis = data.analysis || "No result returned.";
+  <div class="section">
+    <h2>3. How We Use the Information</h2>
+    <p>The information is used to:</p>
+    <ul>
+      <li>Generate and deliver ICT support using AI (Google Gemini)</li>
+      <li>Improve the bot’s responsiveness and relevance</li>
+    </ul>
+    <p>We <strong>do not</strong> share or sell your data for advertising purposes.</p>
+  </div>
 
-      const scamType = rawAnalysis.match(/Scam Type:\s*(.+)/i)?.[1] || "Not specified";
-      const riskLevel = rawAnalysis.match(/Risk Level:\s*(.+)/i)?.[1] || "Not specified";
-      const advice = rawAnalysis.match(/Advice:\s*([\s\S]+)/i)?.[1] || "No advice provided";
+  <div class="section">
+    <h2>4. Third-Party Services</h2>
+    <p>We use the <strong>Gemini API (by Google)</strong> to generate helpful responses. Only the content of your message is processed, and no personally identifiable information is shared with Google.</p>
+  </div>
 
-      resultBox.innerHTML = `
-        <strong>Scam Type:</strong> ${scamType}<br>
-        <strong>Risk Level:</strong> ${riskLevel}<br>
-        <strong>Advice:</strong><br><div style="margin-top: 0.5rem;">${advice.replace(/\n/g, "<br>")}</div>
-      `;
-    })
-    .catch(error => {
-      resultBox.textContent = "Error: " + error.message;
-    });
-  }
+  <div class="section">
+    <h2>5. Data Security</h2>
+    <p>We implement appropriate security measures to protect your data from unauthorized access. Communications are handled securely through Facebook Messenger and Google Apps Script.</p>
+  </div>
 
-  function clearInput() {
-    document.getElementById("message").value = '';
-    document.getElementById("result").style.display = 'none';
-  }
-</script>
+  <div class="section">
+    <h2>6. Your Rights</h2>
+    <p>You may stop using the bot at any time. If you have concerns about your data, contact us at:</p>
+    <ul>
+      <li><strong>Email:</strong> [Insert Contact Email]</li>
+      <li><strong>Office:</strong> DSWD ICT Unit – Region X</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>7. Updates to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the “Effective Date” at the top of this page.</p>
+  </div>
+
+  <footer>
+    © [Insert Year] DSWD Region X - ICT Unit
+  </footer>
 
 </body>
 </html>
